@@ -1,0 +1,23 @@
+<h1>Add Manager</h1>
+
+<% if(error) { %>
+    <ul>
+        <% error.forEach((error)=>{ %>
+            <li>
+                <%= error%>
+            </li>
+            <% }) %>
+    </ul>
+    <% } %>
+
+        <!-- form action is http request to a specified method -->
+        <!-- input with the name attribute puts the value of the input on submit -->
+        <!-- into the body of the request -->
+        <form action="http://localhost:3000/managers/add" method="post">
+            Manager ID <input name="_id"><br>
+            Name <input name="name"><br>
+            Salary <input name="salary"><br>
+            <input type="submit" value="Add">
+        </form>
+
+        <a href="http://localhost:3000/">Home</a>

@@ -1,0 +1,18 @@
+<% if(error) { %>
+    <ul>
+        <li>
+            <%= error %>
+        </li>
+    </ul>
+    <% } %>
+        <!-- form action is http request to a specified method -->
+        <!-- input with the name attribute puts the value of the input on submit -->
+        <!-- into the body of the request -->
+        <form action="http://localhost:3000/stores/add" method="post">
+            Store ID <input name="sid"><br>
+            Location <input name="location"><br>
+            Manager ID <input name="mgrid"><br>
+            <input type="submit" value="add">
+        </form>
+
+        <a href="http://localhost:3000/">Home</a>

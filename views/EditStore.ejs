@@ -1,0 +1,23 @@
+<h1>
+    Edit store
+</h1>
+
+<% if(error) { %>
+    <ul>
+        <li>
+            <%= error %>
+        </li>
+    </ul>
+    <% } %>
+
+        <!-- form action is http request to a specified method -->
+        <!-- input with the name attribute puts the value of the input on submit -->
+        <!-- into the body of the request -->
+        <form action="http://localhost:3000/stores/edit/<%= data[0].sid %>" method="post">
+            SID <input value="<%= data[0].sid %>" readonly><br>
+            Location <input name="location" value="<%= data[0].location %>"><br>
+            Manager ID <input name="mgrid" value="<%= data[0].mgrid %>"><br>
+            <input type="submit" value="Edit">
+        </form>
+
+        <a href="http://localhost:3000/">Home</a>

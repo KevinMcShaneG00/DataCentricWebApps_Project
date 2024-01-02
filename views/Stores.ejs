@@ -1,0 +1,44 @@
+<style>
+    table {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<a href="http://localhost:3000/stores/add">add store</a>
+<br></br>
+
+
+<table>
+    <tr>
+        <th>SID</th>
+        <th>Location</th>
+        <th>Manager ID</th>
+        <th>Action</th>
+    </tr>
+    <!-- display each record -->
+    <% data.forEach((store)=>{ %>
+        <tr>
+            <td>
+                <%= store.sid %>
+            </td>
+            <td>
+                <%= store.location %>
+            </td>
+            <td>
+                <%= store.mgrid %>
+            </td>
+
+            <td>
+                <a href="http://localhost:3000/stores/edit/<%= store.sid %>">Update</a>
+            </td>
+        </tr>
+        <% }) %>
+</table>
+
+<a href="http://localhost:3000/">Home</a>

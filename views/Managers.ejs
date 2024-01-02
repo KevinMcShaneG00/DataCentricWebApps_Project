@@ -1,0 +1,33 @@
+<style>
+    table {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<a href="http://localhost:3000/Managers/Add">Add Manager(MongoDB)</a>
+<br></br>
+
+<table>
+    <tr>
+        <th>Manager ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    <!-- for each manager record make a new row and data display details -->
+    <% data.forEach((Manager)=>{ %>
+        <tr>
+            <td><%= Manager._id %></td>
+            <td><%= Manager.name %></td>
+            <td>€<%= Manager.salary %></td>
+        </tr>
+    <% }) %>
+    <tr></tr>
+</table>
+
+<a href="http://localhost:3000/">Home</a>
